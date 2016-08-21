@@ -1,8 +1,3 @@
-/**
- * Created by raffa on 8/16/2016.
- */
-/// <reference path="../def/node.d.ts" />
-//database configuration for knex
 module.exports = {
     //SQLite configuration
     client: 'sqlite3',
@@ -13,6 +8,8 @@ module.exports = {
         directory: __dirname + "/../data/migrations",
         tableName: "version"
     },
+    seeds: {
+        directory: __dirname + '/../data/seeds'
+    },
     useNullAsDefault: true
 };
-//# sourceMappingURL=database.js.map

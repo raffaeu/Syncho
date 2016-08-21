@@ -1,4 +1,9 @@
 ## Welcome to Syncho Api
+Syncho Api is the core of *Syncho*. With these APIs you can interact with the Syncho platform and:
+* create your own package
+* run a synchronization
+* manage your queues and jobs
+* and much more
 
 ### General Documentation
 This section of Syncho contains the Node.js Http Api used by Syncho and 
