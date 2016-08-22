@@ -7,21 +7,9 @@ Welcome to Syncho's documentation!
 ==================================
 
 Welcome to Syncho's documentation.
+
+What is Syncho?
+---------------
 Syncho is a synchronization framework based on Node.js and Google Polymer capable to run synchronizations of datasets between two or more applications.
 
 The only requirements is that each application must expose a set of HTTP APIs to allow interactions with other applications. The rest is handled by Syncho.
-
-Contents:
-
-.. toctree::
-   :maxdepth: 2
-
-
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
-
