@@ -18,9 +18,10 @@ Syncho provides an `extensive set of features`_ some of them are *"free"* while 
 .. image:: https://ci.appveyor.com/api/projects/status/hox8dhh5eyy7jsf4/branch/master?svg=true
 
 .. toctree::
-    :maxdepth: 2
+    :maxdepth: 1
 
     overview/backstory.rst
+    models/index.rst
 
 Indices and tables
 ==================

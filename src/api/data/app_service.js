@@ -5,6 +5,9 @@ var AppServiceFactory = function (orm) {
         tableName: 'apps',
         events: function () {
             return this.hasMany(Event, 'appId');
+        },
+        actions: function(){
+            return this.hasMany(Action, 'appId');
         }
     });
 
@@ -15,12 +18,23 @@ var AppServiceFactory = function (orm) {
         }
     });
 
+    var Action = orm.Model.extend({
+        tableName: 'actions',
+        app: function(){
+            return this.belongsTo(App);
+        }
+    });
+
+    function splitExpand($expand){
+        return $expand.split(',');
+    }
+
     return {
 
         /* Get all available Apps */
         getApps: function ($expand) {
             if ($expand) {
-                return App.collection().fetch({withRelated: [$expand]});
+                return App.collection().fetch({withRelated: splitExpand($expand)});
             } else {
                 return App.collection().fetch();
             }
@@ -29,7 +43,7 @@ var AppServiceFactory = function (orm) {
         /* Get a single App by id */
         getApp: function (id, $expand) {
             if ($expand) {
-                return App.where('id', id).fetch({withRelated: [$expand]});
+                return App.where('id', id).fetch({withRelated: splitExpand($expand)});
             } else {
                 return App.where('id', id).fetch();
             }

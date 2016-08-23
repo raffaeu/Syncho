@@ -1,0 +1,28 @@
+Syncho Domain Model
+===================
+Following is the Domain Model adopted by Syncho APIs. It is divided by APIs as following:
+
+Syncho Application
+------------------
+The *Application* Domain Model contains all objects used by Syncho to manage synchronizations between the various Applications avaialble in Syncho.
+
+With this APIs, you can not only retrieve the current available Applications and their configurations but you can also submit to Syncho a new Application for review or create your own Application.
+
+.. IMPORTANT::
+   Beware, in order to submit an App or to modify or delete an existing App from Syncho, you need special Permissions, otherwise your requests will return a 401 response (Not Authorized).
+
+App
+~~~
+The App object represent one of the available Applications in Syncho and it has the following structure:
+
+.. code-block:: json
+
+   {
+	"id": 1,
+	"name": "Gmail",
+	"description": "   E-mail web service provided by Google.",
+	"url": "https://mail.google.com",
+	"sdk": "https://developers.google.com/gmail/api/",
+	"created_at": 1471877331769,
+	"updated_at": 1471877331769
+   }

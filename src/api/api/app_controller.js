@@ -10,7 +10,7 @@ var AppApiFactory = function (express, appService) {
             })
             .catch(function (err) {
                 console.error('Error occurred in Apps Api: ' + err);
-                response.status(400).send(err);
+                response.status(500).send("" + err);
         });
     }
 
@@ -25,7 +25,7 @@ var AppApiFactory = function (express, appService) {
             })
             .catch(function (err) {
                 console.error('Error occurred in Apps Api: ' + err);
-                response.status(400).send(err);
+                response.json('Error occurred in Apps Api: ' + err);
             });
     }
 
@@ -36,7 +36,7 @@ var AppApiFactory = function (express, appService) {
             })
             .catch(function (err) {
                 console.error('Error occurred in Apps Api: ' + err);
-                response.status(400).send(err);
+                response.json('Error occurred in Apps Api: ' + err);
             });
     }
 
@@ -47,7 +47,7 @@ var AppApiFactory = function (express, appService) {
             })
             .catch(function (err) {
                 console.error('Error occurred in Apps Api: ' + err);
-                response.status(400).send(err);
+                response.json('Error occurred in Apps Api: ' + err);
             });
     }
 
@@ -58,7 +58,7 @@ var AppApiFactory = function (express, appService) {
             })
             .catch(function (err) {
                 console.error('Error occurred in Apps Api: ' + err);
-                response.status(400).send(err);
+                response.json('Error occurred in Apps Api: ' + err);
             });
     }
 
