@@ -1,0 +1,7 @@
+{
+  "name": "Syncho",
+  "short_name": "Syncho",
+  "description": "Syncho front-end built with Polymer 1.x",
+  "start_url": "/",
+  "display": "standalone"
+}

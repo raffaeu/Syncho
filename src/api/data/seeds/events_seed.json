@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "name": "New E-mail",
+    "description": "Event triggered when a new e-mail is received.",
+    "created_at": 1472227619371,
+    "updated_at": 1472227619371,
+    "appId": 1
+  },
+  {
+    "id": 2,
+    "name": "New E-mail matching criteria",
+    "description": "Event triggered when a new e-mail, that matches certain criteria, is received.",
+    "created_at": 1472227619371,
+    "updated_at": 1472227619371,
+    "appId": 1
+  },
+  {
+    "id": 3,
+    "name": "New E-mail with Label",
+    "description": "Event triggered when a new e-mail, set with a certain Label, is received.",
+    "created_at": 1472227619371,
+    "updated_at": 1472227619371,
+    "appId": 1
+  },
+  {
+    "id": 4,
+    "name": "New E-mail Thread",
+    "description": "Event triggered when a new e-mail thread is started.",
+    "created_at": 1472227619371,
+    "updated_at": 1472227619371,
+    "appId": 1
+  }
+]

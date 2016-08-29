@@ -1,0 +1,16 @@
+[
+  {
+    "id":1,
+    "name":"E-mail",
+    "description":"Application used to interact with E-mails",
+    "created_at": 1472227619371,
+    "updated_at": 1472227619371
+  },
+  {
+    "id":2,
+    "name":"Chat",
+    "description":"Application used to send instant messaging",
+    "created_at": 1472227619371,
+    "updated_at": 1472227619371
+  }
+]

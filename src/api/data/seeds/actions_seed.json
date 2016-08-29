@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "Create E-mail",
+    "description": "Create a new E-mail Message and send it.",
+    "created_at": 1472227619371,
+    "updated_at": 1472227619371,
+    "appId": 1
+  },
+  {
+    "id": 2,
+    "name": "Create Draft",
+    "description": "Create a new E-mail Message but does not send it.",
+    "created_at": 1472227619371,
+    "updated_at": 1472227619371,
+    "appId": 1
+  },
+  {
+    "id": 3,
+    "name": "Create Label",
+    "description": "Create a new Label.",
+    "created_at": 1472227619371,
+    "updated_at": 1472227619371,
+    "appId": 1
+  }
+]

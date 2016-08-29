@@ -1,0 +1,15 @@
+[
+  {
+    "id": 1,
+    "image":"gmail.png",
+    "name": "Gmail",
+    "description": "G-mail is a free, advertising-supported email service provided by Google. It is one of the most popular e-mail services in the world.",
+    "url": "https://mail.google.com",
+    "sdk": "https://developers.google.com/gmail/api/",
+    "is_beta":true,
+    "is_premium":false,
+    "version":1,
+    "created_at": 1472227118037,
+    "updated_at": 1472227118037
+  }
+]
