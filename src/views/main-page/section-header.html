@@ -1,0 +1,136 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/paper-styles/typography.html">
+<link rel="import" href="../../bower_components/app-layout/app-grid/app-grid-style.html">
+<link rel="import" href="../../bower_components/iron-flex-layout/iron-flex-layout.html">
+<link rel="import" href="../../bower_components/paper-card/paper-card.html">
+<link rel="import" href="../../bower_components/paper-input/paper-input.html">
+<link rel="import" href="../../bower_components/paper-checkbox/paper-checkbox.html">
+<link rel="import" href="../../bower_components/paper-button/paper-button.html">
+
+<dom-module id="section-header">
+    <template>
+        <style include="app-grid-style">
+
+            :root{
+                --paper-input-container-focus-color: var(--paper-light-green-500);
+                --paper-checkbox-checked-color: var(--paper-light-green-500);
+                --paper-input-container-color: var(--paper-grey-400);
+                --paper-input-container-input-color: var(--paper-grey-500);
+                --paper-checkbox-label-color: var(--paper-grey-400);
+                --paper-checkbox-unchecked-color: var(--paper-grey-400);
+                --paper-checkbox-label-checked-color: var(--paper-grey-500);
+            }
+
+            :host{
+                --app-grid-columns:3;
+                --app-grid-item-height:50%;
+            }
+
+            ul{
+                padding:30px 0 0 0;
+                margin:0 0 0 0;
+                list-style: none;
+                align-items:center;
+                justify-content: center;
+            }
+
+            .item:last-child{
+
+            }
+
+            header{
+                padding:30px 170px;
+                background: url('../../public/img/hero.png') center, linear-gradient(to bottom, var(--paper-blue-grey-900), var(--paper-blue-grey-700));
+                background-size:2500px 700px, 100%;
+            }
+
+
+
+            h1{
+                @apply(--paper-font-headline);
+                color: var(--paper-grey-300);
+                font-size:3em;
+                font-weight:300;
+                line-height: 1.2em;
+            }
+
+            h2{
+                @apply(--paper-font-subhead);
+                color: var(--paper-grey-300);
+                font-size:1.3em;
+                line-height:1.6em;
+            }
+
+            paper-card{
+                width: 100%;
+            }
+
+            .panel-title{
+                @apply(--paper-font-subhead);
+                color: var(--paper-grey-500);
+                font-size:1.6em;
+                line-height:1.6em;
+                font-weight: 300;
+            }
+
+            paper-button{
+                background: var(--paper-light-green-500);
+                color: white;
+            }
+            paper-checkbox{
+                margin: 10px 0 10px;
+            }
+        </style>
+
+        <header>
+            <ul class="app-grid">
+                <li class="item">
+                    <div>
+                        <h1>{{title}}</h1>
+                        <h2>{{subtitle}}</h2>
+                    </div>
+                </li>
+                <li class="item">
+
+                </li>
+                <li class="item">
+                    <div>
+                        <paper-card>
+                            <div class="card-content">
+                                <span class="panel-title">{{panelTitle}}</span>
+                                <paper-input label="Full Name"></paper-input>
+                                <paper-input label="E-mail"></paper-input>
+                                <paper-input label="Password" type="password"></paper-input>
+                                <paper-checkbox>Sign me up for your monthly Newsletter</paper-checkbox>
+                            </div>
+                            <div class="card-actions">
+                                <paper-button>Sign Up Now!</paper-button>
+                            </div>
+                        </paper-card>
+                    </div>
+                </li>
+            </ul>
+        </header>
+    </template>
+
+    <script>
+        Polymer({
+            is:'section-header',
+            properties:{
+                title:{
+                    type: String,
+                    value: 'Structure, Organize and Orchestrate'
+                },
+                subtitle:{
+                    type: String,
+                    value: 'Automate your business processes and unify data across multiple platforms.' +
+                            ' Integrate any of your SaaS or PaaS applications with other systems.'
+                },
+                panelTitle:{
+                    type: String,
+                    value:'Sign Up and start your Trial today!'
+                }
+            }
+        });
+    </script>
+</dom-module>

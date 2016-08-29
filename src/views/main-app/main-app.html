@@ -1,5 +1,9 @@
 <link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/app-layout/app-layout.html">
 <link rel="import" href="../main-toolbar/main-toolbar.html">
+<link rel="import" href="../main-page/main-page.html">
+<link rel="import" href="../../bower_components/paper-styles/typography.html">
+<link rel="import" href="../../bower_components/paper-styles/color.html">
 
 <dom-module id="main-app">
   <template>
@@ -7,8 +11,12 @@
 
     </style>
 
-    <main-toolbar></main-toolbar>
-
+      <app-header-layout fullbleed>
+          <app-header fixed shadow>
+              <main-toolbar></main-toolbar>
+          </app-header>
+          <main-page></main-page>
+      </app-header-layout>
   </template>
 
   <script>

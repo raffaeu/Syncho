@@ -1,6 +1,7 @@
 'use strict';
 var AppServiceFactory = function (orm) {
 
+    /* An App */
     var App = orm.Model.extend({
         tableName: 'apps',
         events: function () {
@@ -17,6 +18,7 @@ var AppServiceFactory = function (orm) {
         }
     });
 
+    /* An Event for an App */
     var Event = orm.Model.extend({
         tableName: 'events',
         app: function () {
@@ -24,6 +26,7 @@ var AppServiceFactory = function (orm) {
         }
     });
 
+    /* An Action for an App */
     var Action = orm.Model.extend({
         tableName: 'actions',
         app: function () {
@@ -31,6 +34,7 @@ var AppServiceFactory = function (orm) {
         }
     });
 
+    /* A Query for an App */
     var Queries = orm.Model.extend({
        tableName: 'queries',
        app:function(){
@@ -38,6 +42,7 @@ var AppServiceFactory = function (orm) {
        }
     });
 
+    /* An App Category */
     var Category = orm.Model.extend({
        tableName:'categories',
        app:function(){
@@ -45,6 +50,9 @@ var AppServiceFactory = function (orm) {
        }
     });
 
+    /* retrieve expands
+        TODO this should be refactored into a Utility class
+     */
     function splitExpand($expand) {
         return $expand.split(',');
     }
@@ -53,14 +61,17 @@ var AppServiceFactory = function (orm) {
 
         /* Get all available Apps */
         getApps: function ($expand) {
+            /*
             var premise = App.query(function(qb){
-                qb.offset(0).limit(10);
+                qb.offset(0).limit(100);
             });
             if ($expand) {
                 return premise.fetch({withRelated: splitExpand($expand)});
             } else {
                 return premise.fetch();
             }
+            */
+            return App.collection().fetch();
         },
 
         /* Get a single App by id */
@@ -84,10 +95,16 @@ var AppServiceFactory = function (orm) {
             }).save();
         },
 
-        /* Delete an existing App and related Events */
+        /* Delete an existing App and related children */
         deleteApp: function (id) {
             return Promise.all([
                 orm.knex('events')
+                    .del()
+                    .where('appId', id),
+                orm.knex('actions')
+                    .del()
+                    .where('appId', id),
+                orm.knex('queries')
                     .del()
                     .where('appId', id),
                 orm.knex('apps')

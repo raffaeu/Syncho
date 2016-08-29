@@ -1,7 +1,7 @@
 'use strict';
 var path = require('path');
 
-var HomeApiFactory = function (express) {
+var HomeControllerFactory = function (express) {
     var app = express.app;
 
     /* Map '/' root method */
@@ -16,4 +16,4 @@ var HomeApiFactory = function (express) {
     };
 };
 
-module.exports = HomeApiFactory;
+module.exports = HomeControllerFactory;

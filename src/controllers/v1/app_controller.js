@@ -1,6 +1,7 @@
 'use strict';
-var AppApiFactory = function (express, appService) {
+var AppControllerFactory = function (express, appService, odata) {
 
+    /* TODO create logger like example */
     var api = express.app;
 
     /* Get all apps ordered by Name Ascending */
@@ -78,4 +79,4 @@ var AppApiFactory = function (express, appService) {
     };
 };
 
-module.exports = AppApiFactory;
+module.exports = AppControllerFactory;
